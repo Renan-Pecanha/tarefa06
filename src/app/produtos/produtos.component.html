@@ -1,0 +1,18 @@
+<h2>Produtos disponíveis</h2>
+
+<table class="produtos_class">
+
+    <tr *ngFor="let prodList of interface">
+        <button type="button" (click)="onSelect(prodList)" [class.selected]="prodList === selectedProd">
+
+        <td class="id">Id: {{prodList.id}},</td>
+        <td class="name">Nome2: {{prodList.name}},</td>
+        <td class="lote">lote: {{prodList.lote}},</td>
+        <td class="preco">Preço: {{prodList.preco}},</td>
+        <td class="marca">Marca: {{prodList.marca}},</td>
+
+        </button>
+    </tr>
+
+    <app-produto-detalhes [produto]="selectedProd"></app-produto-detalhes>
+</table>
